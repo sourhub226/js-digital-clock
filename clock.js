@@ -19,6 +19,8 @@ setInterval(function () {
 	var hrsDigit2 = document.querySelector(".hours .digit-2 p");
 	var minDigit1 = document.querySelector(".minutes .digit-1 p");
 	var minDigit2 = document.querySelector(".minutes .digit-2 p");
+	var am = document.querySelector(".am");
+	var pm = document.querySelector(".pm");
 
 	if (hours.length < 2) {
 		hrsDigit1.style.color = "transparent";
@@ -31,9 +33,11 @@ setInterval(function () {
 	minDigit2.innerHTML = minutes[1];
 
 	if (ampm == "am") {
-		document.querySelector(".am").style.backgroundColor = "#f33";
+		am.style.backgroundColor = "#f33";
+		pm.style.backgroundColor = "transparent";
 	} else {
-		document.querySelector(".pm").style.backgroundColor = "#f33";
+		am.style.backgroundColor = "transparent";
+		pm.style.backgroundColor = "#f33";
 	}
 
 	var digit = document.querySelectorAll("p");
